@@ -6,7 +6,7 @@ This project is a web application designed to detect and crop visiting and NID c
 
 
 
-- `model/seg.pt`: The YOLO model file.
+- `model/seg.pt`: The Fine-tuned YOLOV8 model file.
 - `static/`: Contains background image and company logo.
 - `templates/`: Contains the HTML template for the web application.
 - `app.py`: The main Flask application.
