@@ -2,17 +2,8 @@
 
 This project is a web application designed to detect and crop visiting and NID cards from uploaded images using a YOLOv8 model. The application uses Flask as the web framework, OpenCV for image processing, and the Ultralytics YOLO model for object detection. Here Fine-tuned the YOLOV8 model with real Cards and NIDs image, then use the trained model for detect and crop the card and NID.
 
-## Project Structure
-├── model
-│   └── seg.pt
-├── static
-│   ├── background.jpg
-│   └── company_logo.png
-├── templates
-│   └── index.html
-├── app.py
-├── requirements.txt
-└── README.md
+![image](https://github.com/polok-dev98/Visiting_NID_CardCropping_system_YoloV8/assets/104290708/bfce35c9-963a-4bfc-93a8-62961885f4e8)
+
 
 
 - `model/seg.pt`: The YOLO model file.
@@ -72,7 +63,8 @@ cd project_folder
 
 4. You can view and download the cropped image.  </br>
 
-   ![Screenshot 2024-06-12 142440](https://github.com/polok-dev98/Visiting_NID_CardCropping_system_YoloV8/assets/104290708/9cc3f568-3eef-4088-8695-b99e63af739a)
+   ![Screenshot 2024-06-12 142440](https://github.com/polok-dev98/Visiting_NID_CardCropping_system_YoloV8/assets/104290708/f7c33a5a-1a38-45bd-bf47-4037b3e9f841)
+
 
    </br>
    </br>
