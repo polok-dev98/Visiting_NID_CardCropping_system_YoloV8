@@ -63,15 +63,16 @@ cd project_folder
 
 4. You can view and download the cropped image.  </br>
 
-   ![Screenshot 2024-06-12 142440](https://github.com/polok-dev98/Visiting_NID_CardCropping_system_YoloV8/assets/104290708/f7c33a5a-1a38-45bd-bf47-4037b3e9f841)
 
+<img src="https://github.com/polok-dev98/Visiting_NID_CardCropping_system_YoloV8/assets/104290708/ab3a582e-9dc6-4688-8d31-c5a4038d0d5a" alt="image" width="400">
 
-   </br>
-   </br>
+</br>
+</br>
 
-   ![Screenshot 2024-06-12 142345](https://github.com/polok-dev98/Visiting_NID_CardCropping_system_YoloV8/assets/104290708/9628828d-2962-4829-acef-adec57f5b24a)
+<img src="https://github.com/polok-dev98/Visiting_NID_CardCropping_system_YoloV8/assets/104290708/9628828d-2962-4829-acef-adec57f5b24a" alt="Screenshot" width="400">
 
-   </br>
+</br>
+
 
 
 
