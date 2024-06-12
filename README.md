@@ -57,11 +57,15 @@ cd project_folder
 
 1. Navigate to the homepage.
 
-2. Upload an image containing a card.
+   <img src="https://github.com/polok-dev98/Visiting_NID_CardCropping_system_YoloV8/assets/104290708/b1c14643-24e1-42fe-8bcb-f386047c5c93" alt="image" width="800">
 
-3. The application will process the image and return the cropped card if detected.
 
-4. You can view and download the cropped image.  </br>
+
+3. Upload an image containing a card.
+
+4. The application will process the image and return the cropped card if detected.
+
+5. You can view and download the cropped image.  </br>
 
 
 <img src="https://github.com/polok-dev98/Visiting_NID_CardCropping_system_YoloV8/assets/104290708/ab3a582e-9dc6-4688-8d31-c5a4038d0d5a" alt="image" width="800">
