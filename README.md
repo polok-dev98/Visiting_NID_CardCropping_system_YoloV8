@@ -49,7 +49,7 @@ cd project_folder
 3. **Card Cropping**: If a card is detected with high confidence, the application crops the card from the image.
 4. **Result Display**: The cropped card image is saved and displayed to the user.
 
-## Live Demo:  [Link Text](https://huggingface.co/spaces/iluasdfiuasfd/Visiting-and-NID-Card-Cropping)
+## Live Demo:  [HuggingFace Link](https://huggingface.co/spaces/iluasdfiuasfd/Visiting-and-NID-Card-Cropping)
 
 
 
