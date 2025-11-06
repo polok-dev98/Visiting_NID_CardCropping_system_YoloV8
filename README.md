@@ -1,3 +1,9 @@
+
+
+<img width="1843" height="914" alt="Screenshot from 2025-11-06 20-53-53" src="https://github.com/user-attachments/assets/3bde360f-556c-43d9-b392-d1d8f89642a9" />
+
+
+
 # Visiting and NID Card Cropping System using YOLOv8 🎯
 
 [![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)
@@ -12,7 +18,6 @@ This project is an intelligent web application that automatically detects and cr
 
 <div align="center">
 
-*Intelligent card detection and cropping system*
 
 </div>
 
@@ -120,9 +125,12 @@ User Upload → Flask API → YOLO Detection → OpenCV Cropping → Result Disp
 
 1. **Access Homepage**
 </br> 
-   <img src="https://github.com/polok-dev98/Visiting_NID_CardCropping_system_YoloV8/assets/104290708/b1c14643-24e1-42fe-8bcb-f386047c5c93" alt="Homepage" width="800">
+<img width="1843" height="914" alt="Screenshot from 2025-11-06 20-59-15" src="https://github.com/user-attachments/assets/0dc91c8a-53a4-4580-b4cf-5ceb0ac3d835" />
+
 
 </br>
+</br>
+
 3. **Upload Image**: Drag and drop or click to upload image containing cards
 4. **Automatic Processing**: System detects and crops cards automatically
 5. **View Results**: See cropped cards with download options
@@ -131,11 +139,28 @@ User Upload → Flask API → YOLO Detection → OpenCV Cropping → Result Disp
 
 **Visiting Card Detection:**
 </br>
-<img src="https://github.com/polok-dev98/Visiting_NID_CardCropping_system_YoloV8/assets/104290708/ab3a582e-9dc6-4688-8d31-c5a4038d0d5a" alt="Visiting Card Example" width="800">
 </br>
+<img width="1843" height="914" alt="Screenshot from 2025-11-06 21-16-39" src="https://github.com/user-attachments/assets/e1c4b7cd-184d-4949-ab0c-bf774553d826" />
+
+</br>
+</br>
+
+<img width="1843" height="914" alt="Screenshot from 2025-11-06 21-19-02" src="https://github.com/user-attachments/assets/d565a40e-8737-447a-bb53-1dc5f9881156" />
+
+</br>
+</br>
+
 **NID Card Detection:**
 </br>
-<img src="https://github.com/polok-dev98/Visiting_NID_CardCropping_system_YoloV8/assets/104290708/9628828d-2962-4829-acef-adec57f5b24a" alt="NID Card Example" width="800">
+</br>
+<img width="1843" height="914" alt="Screenshot from 2025-11-06 21-00-23" src="https://github.com/user-attachments/assets/0e189e40-7dfe-4ce9-aae6-965307426d7d" />
+
+</br>
+</br>
+
+<img width="1843" height="914" alt="Screenshot from 2025-11-06 21-05-11" src="https://github.com/user-attachments/assets/a051e57a-1360-40b4-ac77-b7ae3b3802a9" />
+</br>
+
 
 </br>
 
