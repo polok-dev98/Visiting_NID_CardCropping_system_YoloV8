@@ -237,7 +237,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-polok98-blue?style=flat-square&logo=linkedin)](https://www.linkedin.com/in/polok98/)
 [![GitHub](https://img.shields.io/badge/GitHub-polok--dev98-black?style=flat-square&logo=github)](https://github.com/polok-dev98)
 
-**"Simplifying document digitization through AI-powered automation"** 🚀
 
 ---
 
