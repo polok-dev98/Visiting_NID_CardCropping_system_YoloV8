@@ -1,34 +1,27 @@
-# Use the official Python image from the Docker Hub
-FROM python:3.10.0-slim-buster
+FROM python:3.10-slim-bullseye
 
-# Upgrade pip to the latest version and install dependencies in one RUN command
+# Install system dependencies
 RUN apt-get update && \
-    apt-get install -y git libgl1-mesa-glx libglib2.0-0 && \
-    python -m pip install --upgrade pip setuptools wheel && \
+    apt-get install -y git libgl1-mesa-glx libglib2.0-0 libsm6 libxext6 libxrender-dev && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 
-# Set the working directory in the container
 WORKDIR /app
 
-# Copy requirements.txt into the container at /app
+# Copy requirements first for better caching
 COPY requirements.txt .
 
-# Install any needed packages specified in requirements.txt
-RUN pip install --no-cache-dir -r requirements.txt
+# Upgrade pip and install Python dependencies
+RUN python -m pip install --upgrade pip setuptools wheel && \
+    pip install --no-cache-dir -r requirements.txt
 
-# Create a directory for output within the application directory
-RUN mkdir -p /app/output && \
-    chmod -R 777 /app/output  # Adjust permissions as needed
+# Create directories
+RUN mkdir -p /app/uploads /app/output && \
+    chmod -R 777 /app/uploads /app/output
 
-# Copy the current directory contents into the container at /app
+# Copy application code last
 COPY . .
 
-# Make port 7860 available to the world outside this container
 EXPOSE 7860
 
-# Define environment variable (if needed)
-# ENV FLASK_APP=app.py
-
-# Command to run the application using Gunicorn
 CMD ["gunicorn", "--bind", "0.0.0.0:7860", "app:app"]

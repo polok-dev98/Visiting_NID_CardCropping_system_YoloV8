@@ -3,194 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Card cropping</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            margin: 0;
-            padding: 0;
-            position: relative;
-            background-image: url('static/depositphotos_489854724-stock-illustration-light-multicolor-rainbow-vector-abstract.jpg');
-            background-size: 2300px;
-            background-repeat: no-repeat;
-            background-position: center;
-            background-color: rgba(255, 255, 255, 0.2);
-            backdrop-filter: blur(7px);
-            min-height: 100vh; /* Ensure page takes at least viewport height */
-        }
-
-        form {
-            margin-bottom: 20px;
-        }
-
-        /* File uploader and predict button styles */
-        .file-upload-label {
-            padding: 10px;
-        }
-
-        #predictBtn {
-            padding: 10px 20px;
-            margin-top: 10px;
-            background-color: #007bff;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 16px;
-            transition: background-color 0.3s;
-        }
-
-        #predictBtn:hover {
-            background-color: #0056b3;
-        }
-
-        #predictBtn:active {
-            background-color: #004f9f;
-        }
-
-        #predictBtn:focus {
-            outline: none;
-        }
-
-        .file-upload-input {
-            display: none;
-        }
-
-        .file-upload-icon {
-            font-size: 30px;
-            margin-right: 1px;
-        }
-
-        .image-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin-bottom: 20px;
-            position: relative;
-        }
-
-        .image-wrapper {
-            position: relative;
-            margin: 0 50px; /* Increased space between the images */
-        }
-
-        .image-label {
-            text-align: center;
-            background-color: #ffffff;
-            padding: 5px 10px;
-            border-radius: 5px;
-            font-weight: bold;
-            margin-top: 10px;
-            display: none; /* Initially hide labels */
-        }
-
-        .image-container img {
-            height: auto;
-            display: none; /* Initially hide images */
-        }
-
-        #uploadedImage {
-            max-width: 200px; /* Smaller size for uploaded image */
-        }
-
-        #croppedImage {
-            max-width: 250px; 
-        }
-
-        #result {
-            margin-top: 20px;
-            position: relative;
-        }
-
-        #loading {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            display: none;
-        }
-
-        #logo {
-            position: absolute;
-            bottom: 5px;
-            right: 5px;
-            max-width: 100px; /* Increase logo size */
-            height: auto;
-        }
-
-        .footprint {
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            text-align: center;
-            background-color: rgba(255, 255, 255, 0.2);
-            padding: 10px 0;
-            z-index: 1;
-        }
-
-        .footprint img {
-            max-width: 100px;
-            height: auto;
-            margin-left: auto; /* Push the logo to the right */
-            display: inline-block;
-            vertical-align: middle; /* Align the logo vertically with the text */
-        }
-    </style>
+    <title>Card Cropping System</title>
+    <link rel="stylesheet" href="static/style.css">
 </head>
 <body>
-    <br>
-    <br>
-    <h1>Visiting Card/Id Card Cropping System</h1>
-    <form id="uploadForm" enctype="multipart/form-data">
-        <label for="file-upload" class="file-upload-label">
-            <input type="file" name="image" id="file-upload" class="file-upload-input" accept="image/*" required>
-            <span class="file-upload-icon">📤</span> Choose an image
-        </label>
-        <button id="predictBtn" type="submit">Predict</button>
-    </form>
-    <div id="result">
-        <div id="loading">
-            <img src="path_to_loader_icon.gif" alt="Loader">
-        </div>
-        <p id="message"></p>
-        <div class="image-container">
-            <div class="image-wrapper">
-                <img id="uploadedImage" src="" alt="Uploaded Image">
-                <div class="image-label" id="uploadedLabel">Uploaded Image</div>
+    <div class="main-content">
+        <br>
+        <br>
+        <h1>Visiting Card / ID Card Cropping System</h1>
+        <form id="uploadForm" enctype="multipart/form-data">
+            <label for="file-upload" class="file-upload-label">
+                <input type="file" name="image" id="file-upload" class="file-upload-input" accept="image/*" required>
+                <span class="file-upload-icon">📤</span> Choose an image
+            </label>
+            <button id="predictBtn" type="submit">Predict</button>
+        </form>
+        <div id="result">
+            <div id="loading">
+                <div class="spinner"></div>
+                <p>Processing your image...</p>
             </div>
-            <div class="image-wrapper">
-                <img id="croppedImage" src="" alt="Cropped Image">
-                <div class="image-label" id="croppedLabel">Output</div>
+            <p id="message"></p>
+            <div class="image-container">
+                <div class="image-wrapper">
+                    <img id="uploadedImage" src="" alt="Uploaded Image">
+                    <div class="image-label" id="uploadedLabel">Uploaded Image</div>
+                </div>
+                <div class="image-wrapper">
+                    <img id="croppedImage" src="" alt="Cropped Image">
+                    <div class="image-label" id="croppedLabel">Output</div>
+                </div>
             </div>
         </div>
     </div>
 
-    <!-- Footprint -->
-    <div class="footprint">
-        <p>Copyright © XYZ It Ltd. 2024</p>
-        <img src="static/360_F_517815080_tD3cmJRmhhztVmeHrnJd3DA4HT1Zkks7 (1).jpg" alt="Company Logo">
-    </div>
+    <!-- Minimal Footer -->
+    <footer class="minimal-footer">
+        <p>Developed by Asif Pervez Polok</p>
+    </footer>
+
     <script>
-        document.getElementById('uploadForm').addEventListener('submit', async function(event) {
-            event.preventDefault();
-            const formData = new FormData(this);
+    document.getElementById('uploadForm').addEventListener('submit', async function(event) {
+        event.preventDefault();
+        const formData = new FormData(this);
 
-            // Show loading icon when form is submitted
-            document.getElementById('loading').style.display = 'block';
+        // Show loading icon when form is submitted
+        document.getElementById('loading').style.display = 'block';
 
-            const fileInput = document.getElementById('file-upload');
-            const file = fileInput.files[0];
-            let uploadedImageSrc = '';
-            if (file) {
-                const reader = new FileReader();
-                reader.onload = function(e) {
-                    uploadedImageSrc = e.target.result;
-                }
-                reader.readAsDataURL(file);
+        const fileInput = document.getElementById('file-upload');
+        const file = fileInput.files[0];
+        let uploadedImageSrc = '';
+        if (file) {
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                uploadedImageSrc = e.target.result;
             }
+            reader.readAsDataURL(file);
+        }
 
+        try {
             const response = await fetch('/detect-and-crop', {
                 method: 'POST',
                 body: formData
@@ -198,6 +69,10 @@
 
             const result = await response.json();
             document.getElementById('message').textContent = result.message;
+
+            // Show the image container
+            const imageContainer = document.querySelector('.image-container');
+            imageContainer.style.display = 'flex';
 
             if (uploadedImageSrc) {
                 const uploadedImage = document.getElementById('uploadedImage');
@@ -223,8 +98,12 @@
                 croppedLabel.style.display = 'none';
             }
 
+        } catch (error) {
+            document.getElementById('message').textContent = 'Error processing image: ' + error.message;
+        } finally {
             document.getElementById('loading').style.display = 'none';
-        });
-    </script>
+        }
+    });
+</script>
 </body>
 </html>
